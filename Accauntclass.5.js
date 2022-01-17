@@ -1,6 +1,7 @@
 class Account {
+    static id = 0
     constructor(name, balance) {
-        this.id = 0
+        this.id = Account.id++
         this._name = name
         this._balance = balance
        
@@ -50,7 +51,6 @@ class Account {
     }
 }
 let acc1 = new Account("Card Account", 1000);
-acc1.name = "Another Card";
 let acc2 = new Account("Saving account", 2000);
 // console.log(acc2.balance);
 // console.log(acc2.credit(400));
